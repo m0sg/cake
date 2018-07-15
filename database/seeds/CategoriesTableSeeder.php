@@ -35,11 +35,6 @@ class CategoriesTableSeeder extends Seeder
                 'alias' => 'Childrens',
             ]);
             categories::create([
-                'title' => 'Праздничные',
-                'parent_id' => '1',
-                'alias' => 'Festive',
-            ]);
-            categories::create([
                 'title' => 'Корпоративные',
                 'parent_id' => '1',
                 'alias' => 'Corporate',
@@ -51,22 +46,15 @@ class CategoriesTableSeeder extends Seeder
                 'alias' => 'Eclairs',
             ]);
             categories::create([
-                'title' => 'Суфле',
+                'title' => 'Зефир',
                 'parent_id' => '2',
-                'alias' => 'Sufle',
+                'alias' => 'Zefir',
             ]);
             categories::create([
                 'title' => 'Макарони',
                 'parent_id' => '2',
                 'alias' => 'Macaroni',
             ]);
-            categories::create([
-                'title' => 'Тирамису',
-                'parent_id' => '2',
-                'alias' => 'Tiramisu',
-            ]);
-
-
 
         }
 
