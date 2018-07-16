@@ -1,15 +1,19 @@
 <?php
 
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Repositories\ProductsRepository;
+use Config;
 
 class IndexController extends SiteController
 {
-    public function __construct()
+    public function __construct(ProductsRepository $p_rep)
     {
         parent::__construct(new \App\Repositories\MenusRepository(new \App\Models\Menus));
 
+        $this->p_rep = $p_rep;
         $this->template = env('THEME'). '.index';
     }
 
@@ -20,7 +24,12 @@ class IndexController extends SiteController
      */
     public function index()
     {
-        //
+        $products = $this->getProducts();
+
+        $content = view(env('THEME').'.content')->with('products', $products)->render();
+
+        $this->vars = array_add($this->vars, 'content', $content);
+
         $this->keywords = "Home Page";
         $this->meta_desc = "Home Page";
         $this->title = "Home Page";
@@ -30,6 +39,11 @@ class IndexController extends SiteController
 
 
         return $this->renderOutput();
+    }
+    protected function getProducts(){
+        $products = $this->p_rep->get('*', Config::get('settings.home_port_count'));
+
+        return $products;
     }
 
     /**
