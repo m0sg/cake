@@ -20,6 +20,7 @@ class CreateProductsTable extends Migration
             $table->text('desc');
             $table->string('alias',150)->unique();
             $table->string('img');
+            $table->integer('price');
 
 
 

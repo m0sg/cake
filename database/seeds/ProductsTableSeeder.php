@@ -27,6 +27,8 @@ Duis dui magna, vulputate eget mi ac, pharetra vehicula massa. Phasellus vitae n
                 'alias' => 'Wedding1',
                 'img' => 'Wedding1.jpg',
                 'category_id' => '3',
+                'price' => '10',
+
             ]);
             products::create([
                 'title' => 'Свадебный 2',
@@ -41,6 +43,7 @@ Duis dui magna, vulputate eget mi ac, pharetra vehicula massa. Phasellus vitae n
                 'alias' => 'Wedding2',
                 'img' => 'Wedding2.jpg',
                 'category_id' => '3',
+                'price' => '20',
             ]);
             products::create([
                 'title' => 'Свадебный 3',
@@ -55,6 +58,7 @@ Duis dui magna, vulputate eget mi ac, pharetra vehicula massa. Phasellus vitae n
                 'alias' => 'Wedding3',
                 'img' => 'Wedding3.jpg',
                 'category_id' => '3',
+                'price' => '30',
             ]);
             products::create([
                 'title' => 'Детский 1',
@@ -69,6 +73,7 @@ Duis dui magna, vulputate eget mi ac, pharetra vehicula massa. Phasellus vitae n
                 'alias' => 'Childrens1',
                 'img' => 'Childrens1.jpg',
                 'category_id' => '4',
+                'price' => '40',
             ]);
             products::create([
                 'title' => 'Детский 2',
@@ -83,6 +88,7 @@ Duis dui magna, vulputate eget mi ac, pharetra vehicula massa. Phasellus vitae n
                 'alias' => 'Childrens2',
                 'img' => 'Childrens2.jpg',
                 'category_id' => '4',
+                'price' => '50',
             ]);
             products::create([
                 'title' => 'Детский 3',
@@ -97,6 +103,7 @@ Duis dui magna, vulputate eget mi ac, pharetra vehicula massa. Phasellus vitae n
                 'alias' => 'Childrens3',
                 'img' => 'Childrens3.jpg',
                 'category_id' => '4',
+                'price' => '60',
             ]);
             products::create([
                 'title' => 'Корпоративный 1',
@@ -111,6 +118,7 @@ Duis dui magna, vulputate eget mi ac, pharetra vehicula massa. Phasellus vitae n
                 'alias' => 'Corporate1',
                 'img' => 'Corporate1.jpg',
                 'category_id' => '5',
+                'price' => '70',
             ]);
             products::create([
                 'title' => 'Корпоративный 2',
@@ -125,6 +133,7 @@ Duis dui magna, vulputate eget mi ac, pharetra vehicula massa. Phasellus vitae n
                 'alias' => 'Corporate2',
                 'img' => 'Corporate2.jpg',
                 'category_id' => '5',
+                'price' => '80',
             ]);
             products::create([
                 'title' => 'Корпоративный 3',
@@ -139,6 +148,7 @@ Duis dui magna, vulputate eget mi ac, pharetra vehicula massa. Phasellus vitae n
                 'alias' => 'Corporate3',
                 'img' => 'Corporate3.jpg',
                 'category_id' => '5',
+                'price' => '90',
             ]);
             products::create([
                 'title' => 'Эклер 1',
@@ -153,6 +163,7 @@ Duis dui magna, vulputate eget mi ac, pharetra vehicula massa. Phasellus vitae n
                 'alias' => 'Eclairs',
                 'img' => 'Eclairs1.jpg',
                 'category_id' => '6',
+                'price' => '100',
             ]);
             products::create([
                 'title' => 'Зефир 1',
@@ -167,6 +178,7 @@ Duis dui magna, vulputate eget mi ac, pharetra vehicula massa. Phasellus vitae n
                 'alias' => 'Zefir',
                 'img' => 'Zefir1.jpg',
                 'category_id' => '7',
+                'price' => '110',
             ]);
             products::create([
                 'title' => 'Макарони 1',
@@ -181,6 +193,7 @@ Duis dui magna, vulputate eget mi ac, pharetra vehicula massa. Phasellus vitae n
                 'alias' => 'Macaroni',
                 'img' => 'Macaroni1.jpg',
                 'category_id' => '8',
+                'price' => '120',
             ]);
         }
     }
