@@ -5,15 +5,20 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Pages;
 use App\Articles;
+use App\Tags;
 
 class PostController extends Controller
 {
     //
-    public function execute()
+    public function execute($alias)
     {
+        if (!$alias) {
+            abort(404);
+        }
 
         $pages = Pages::all();
         $articles = Articles::all();
+        $tags = Tags::all();
 
 
         $menu = array();
@@ -25,14 +30,14 @@ class PostController extends Controller
         $post = Articles::where('alias', strip_tags($alias))->first();
 
 
-
-
         return view('site.post', array(
             'menu' => $menu,
             'articles' => $articles,
             'post' => $post,
-
+            'tags' => $tags,
         ));
 
     }
+
+
 }

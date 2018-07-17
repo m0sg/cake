@@ -6,7 +6,7 @@
             <ul>
             @foreach($menu as $item)
                 @if($item['parent'] == 0)
-                    <li class=""><a href="{{ $item['alias'] }}">{{ $item['title'] }}</a></li>
+                    <li class=""><a href="{{ '/'.$item['alias'] }}">{{ $item['title'] }}</a></li>
                 @endif
              @endforeach
             </ul>

@@ -253,7 +253,7 @@ article, aside, details, div, figcaption, figure, footer, header, hgroup, menu, 
 		.gallery-e li a:hover { background: #a04b99; color: #fff; }
 	.gallery-e li .title { display: block; margin: 0 0 -1px; color: #533537; font-weight: 500; font-size: 1.6666em; }
 		.gallery-e li a:hover .title { color: #fff; }
-	.gallery-e li img { display: block; margin: 0 0 21px; }
+	.gallery-e li img { display: block; margin: 0 auto;}
 
 .gallery-f { overflow: hidden; list-style: none; width: 100%; margin: 90px 0 0; padding: 0; background: #fff; color: #7c5e60; text-align: center; }
 	.gallery-f li { overflow: hidden; clear: both; position: relative; font-size: 1.4em; }

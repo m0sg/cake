@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Pages;
 use App\Articles;
+use Image;
 
 class BlogController extends Controller
 {
@@ -13,8 +14,7 @@ class BlogController extends Controller
     {
 
         $pages = Pages::all();
-        $articles = Articles::all();
-
+        $articles = Articles::paginate(6);
 
         $menu = array();
         foreach ($pages as $page){
@@ -23,6 +23,13 @@ class BlogController extends Controller
         }
 
 
+        foreach($articles as $articl) {
+            $img = Image::cache(function ($image) use ($articl) {
+                $image->make("assets/images/" . $articl->img)->resize(null, 273, function ($constraint) {
+                    $constraint->aspectRatio();
+                })->save('cache/' . $articl->img);
+            }, 10, true);
+        }
 
 
         return view('site.blog', array(

@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 
 use App\Pages;
 use App\Products;
+use Image;
 
 
 class IndexController extends Controller
@@ -26,6 +27,18 @@ class IndexController extends Controller
                 $item = array('title' => $page->name, 'alias' => $page->alias, 'parent' => $page->parent);
                 array_push($menu, $item);
         }
+
+
+                foreach($products as $product) {
+            $img = Image::cache(function ($image) use ($product) {
+                $image->make("assets/images/" . $product->img)->resize(null, 204, function ($constraint) {
+                    $constraint->aspectRatio();
+                })->save('cache/' . $product->img);
+            }, 10, true);
+        }
+
+
+
         return view('site.index', array(
                                         'menu' => $menu,
                                         'products' => $products,

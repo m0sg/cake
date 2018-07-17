@@ -167,6 +167,8 @@ return [
         SleepingOwl\Admin\Providers\SleepingOwlServiceProvider::class,
         Lavary\Menu\ServiceProvider::class,
 	    Intervention\Image\ImageServiceProvider::class,
+        Falur\Breadcrumbs\Providers\ServiceProvider::class,
+	
         /*
          * Package Service Providers...
          */
@@ -232,6 +234,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Menu'      => Lavary\Menu\Facade::class,
 	    'Image' => Intervention\Image\Facades\Image::class,
+        'Breadcrumbs' => Falur\Breadcrumbs\Facades\Breadcrumbs::class,
+        'BreadcrumbsFactory' => Falur\Breadcrumbs\Facades\BreadcrumbsFactory::class,
 
     ],
 

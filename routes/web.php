@@ -36,6 +36,14 @@ Route::get('/contacts',['uses'=>'ContactsController@execute','as'=>'contacts']);
 
 Route::auth();
 
+Route::get('/clear', function() {
+    Artisan::call('cache:clear');
+    Artisan::call('config:cache');
+    Artisan::call('view:clear');
+    Artisan::call('route:clear');
+    return "Кэш очищен.";
+});
+
 //Route::match(['get', 'post'], '/',['uses'=>'IndexController@execute','as'=>'home']);
 
 //Route::resource('shop', 'ShopController');
@@ -49,3 +57,5 @@ Route::auth();
 //Auth::routes();
 //
 //Route::get('/home', 'HomeController@index')->name('home');
+
+
