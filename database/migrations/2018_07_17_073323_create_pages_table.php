@@ -18,7 +18,6 @@ class CreatePagesTable extends Migration
             $table->string('name', 100);
             $table->text('text');
             $table->string('alias',150)->unique();
-            $table->string('img',100);
             $table->integer('parent');
 
 

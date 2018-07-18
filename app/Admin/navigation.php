@@ -22,17 +22,47 @@ use SleepingOwl\Admin\Navigation\Page;
 // AdminSection::addMenuPage(\App\User::class)
 
 return [
-    [
-        'title' => 'Dashboard',
-        'icon'  => 'fa fa-dashboard',
-        'url'   => route('admin.dashboard'),
-    ],
 
     [
-        'title' => 'Information',
+        'title' => 'Магазин',
         'icon'  => 'fa fa-exclamation-circle',
-        'url'   => route('admin.information'),
+        'pages' => [
+            (new Page(\App\Products::class))
+                ->setTitle('Товары')
+                ->setIcon('fa fa-newspaper-o')
+                ->setPriority(0),
+            (new Page(\App\Categories::class))
+                ->setTitle('Категории')
+                ->setIcon('fa fa-newspaper-o')
+                ->setPriority(0)
+        ]
     ],
+    [
+        'title' => 'Блог',
+        'icon'  => 'fa fa-exclamation-circle',
+        'pages' => [
+            (new Page(\App\Articles::class))
+                ->setTitle('Посты')
+                ->setIcon('fa fa-newspaper-o')
+                ->setPriority(0),
+            (new Page(\App\Tags::class))
+                ->setTitle('Теги')
+                ->setIcon('fa fa-newspaper-o')
+                ->setPriority(0)
+        ]
+    ],
+    [
+        'title' => 'Разное',
+        'icon'  => 'fa fa-exclamation-circle',
+        'pages' => [
+            (new Page(\App\Pages::class))
+                ->setTitle('Страницы')
+                ->setIcon('fa fa-newspaper-o')
+                ->setPriority(0)
+            ]
+    ],
+
+
 
     // Examples
     // [

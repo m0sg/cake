@@ -14,6 +14,8 @@
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Satisfy" media="screen">
     <link rel="stylesheet" type="text/css" href="{{ asset ('assets/css/print.css')}}" media="print">
     <link rel="icon" type="image/x-icon" href="{{ asset ('assets/images/favicon.ico')}}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
 </head>
 <body>
 <div id="root">

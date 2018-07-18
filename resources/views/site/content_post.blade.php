@@ -1,9 +1,11 @@
 <article id="featured">
-    <figure><img src="1300x371(2).gif" tppabs="http://templatation.net/Site-templates/Cakery/temp/1300x371(2).gif" alt="Placeholder" width="1300" height="450"></figure>
+    <h2>Delicious News</h2>
+    <figure><img src="{{ asset ('assets/images/blog.jpg')}}" alt="Placeholder"></figure>
 </article>
 <section id="content">
     <div class="cols-a">
         <article>
+            {!! Breadcrumbs::render() !!}
             <header>
                 <figure><img src="{{ asset ('assets/images/'.$post['img'])}}" talt="Placeholder" width="870" height="490"> <figcaption>{{ $post['created_at'] }}</figcaption></figure>
                 <h2>{{ $post['title'] }}</h2>

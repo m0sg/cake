@@ -28,6 +28,7 @@ Duis dui magna, vulputate eget mi ac, pharetra vehicula massa. Phasellus vitae n
                 'img' => 'Wedding1.jpg',
                 'category_alias' => 'Wedding',
                 'price' => '10',
+                'home' => '1',
 
             ]);
             products::create([
@@ -44,6 +45,7 @@ Duis dui magna, vulputate eget mi ac, pharetra vehicula massa. Phasellus vitae n
                 'img' => 'Wedding2.jpg',
                 'category_alias' => 'Wedding',
                 'price' => '20',
+
             ]);
             products::create([
                 'title' => 'Свадебный 3',
@@ -59,6 +61,7 @@ Duis dui magna, vulputate eget mi ac, pharetra vehicula massa. Phasellus vitae n
                 'img' => 'Wedding3.jpg',
                 'category_alias' => 'Wedding',
                 'price' => '30',
+                'home' => '1',
             ]);
             products::create([
                 'title' => 'Детский 1',
@@ -89,6 +92,7 @@ Duis dui magna, vulputate eget mi ac, pharetra vehicula massa. Phasellus vitae n
                 'img' => 'Childrens2.jpg',
                 'category_alias' => 'Childrens',
                 'price' => '50',
+                'home' => '1',
             ]);
             products::create([
                 'title' => 'Детский 3',
@@ -104,6 +108,7 @@ Duis dui magna, vulputate eget mi ac, pharetra vehicula massa. Phasellus vitae n
                 'img' => 'Childrens3.jpg',
                 'category_alias' => 'Childrens',
                 'price' => '60',
+                'home' => '1',
             ]);
             products::create([
                 'title' => 'Корпоративный 1',
@@ -119,6 +124,7 @@ Duis dui magna, vulputate eget mi ac, pharetra vehicula massa. Phasellus vitae n
                 'img' => 'Corporate1.jpg',
                 'category_alias' => 'Corporate',
                 'price' => '70',
+                'home' => '1',
             ]);
             products::create([
                 'title' => 'Корпоративный 2',
@@ -149,6 +155,7 @@ Duis dui magna, vulputate eget mi ac, pharetra vehicula massa. Phasellus vitae n
                 'img' => 'Corporate3.jpg',
                 'category_alias' => 'Corporate',
                 'price' => '90',
+                'home' => '1',
             ]);
             products::create([
                 'title' => 'Эклер 1',

@@ -1,6 +1,6 @@
 <article id="featured">
     <h2>Delicious News</h2>
-    <figure><img src="1300x371(1).gif" tppabs="http://templatation.net/Site-templates/Cakery/temp/1300x371(1).gif" alt="Placeholder" width="1300" height="450"></figure>
+    <figure><img src="{{ asset ('assets/images/blog.jpg')}}" alt="Placeholder"></figure>
 </article>
 <section id="content">
     <div class="news-b">

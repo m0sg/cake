@@ -42,6 +42,7 @@ class IndexController extends Controller
         return view('site.index', array(
                                         'menu' => $menu,
                                         'products' => $products,
+                                        'pages' => $pages,
         ));
 
     }

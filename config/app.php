@@ -165,10 +165,11 @@ return [
         Illuminate\View\ViewServiceProvider::class,
 
         SleepingOwl\Admin\Providers\SleepingOwlServiceProvider::class,
-        Lavary\Menu\ServiceProvider::class,
 	    Intervention\Image\ImageServiceProvider::class,
+        Laravel\Scout\ScoutServiceProvider::class,
+        AlgoliaSearch\Laravel\AlgoliaServiceProvider::class,
         Falur\Breadcrumbs\Providers\ServiceProvider::class,
-	
+
         /*
          * Package Service Providers...
          */
@@ -181,8 +182,6 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-
-        App\Providers\AppServiceProvider::class,
 
     ],
 
@@ -232,7 +231,6 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        'Menu'      => Lavary\Menu\Facade::class,
 	    'Image' => Intervention\Image\Facades\Image::class,
         'Breadcrumbs' => Falur\Breadcrumbs\Facades\Breadcrumbs::class,
         'BreadcrumbsFactory' => Falur\Breadcrumbs\Facades\BreadcrumbsFactory::class,

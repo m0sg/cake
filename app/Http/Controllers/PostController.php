@@ -6,20 +6,18 @@ use Illuminate\Http\Request;
 use App\Pages;
 use App\Articles;
 use App\Tags;
+use Falur\Breadcrumbs\BreadcrumbsItem;
+use Falur;
 
 class PostController extends Controller
 {
     //
     public function execute($alias)
     {
-        if (!$alias) {
-            abort(404);
-        }
 
         $pages = Pages::all();
         $articles = Articles::all();
         $tags = Tags::all();
-
 
         $menu = array();
         foreach ($pages as $page){
@@ -30,6 +28,9 @@ class PostController extends Controller
         $post = Articles::where('alias', strip_tags($alias))->first();
 
 
+
+
+
         return view('site.post', array(
             'menu' => $menu,
             'articles' => $articles,
@@ -37,6 +38,13 @@ class PostController extends Controller
             'tags' => $tags,
         ));
 
+    }
+    public function action(Falur\Breadcrumbs\Contracts\Breadcrumbs $breadcrumbs)
+    {
+        $breadcrumbs->addArray([
+            new BreadcrumbsItem('Home', '/'),
+            new BreadcrumbsItem('Blog', '/blog'),
+        ]);
     }
 
 
