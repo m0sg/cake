@@ -14,10 +14,10 @@
             <p class="link-a"><a href="index.htm" tppabs="http://templatation.net/Site-templates/Cakery/">et accumsan mi tincidunt vel</a></p>
         </div>
         <ul class="gallery-d">
-            <li class="a"><img src="{{ asset ('assets/images/213x213(1).gif')}}" tppabs="http://templatation.net/Site-templates/Cakery/temp/213x213(1).gif" alt="Placeholder" width="213" height="213"></li>
-            <li class="b"><img src="{{ asset ('assets/images/213x213(2).gif')}}" tppabs="http://templatation.net/Site-templates/Cakery/temp/213x213(2).gif" alt="Placeholder" width="213" height="213"></li>
-            <li class="c"><img src="{{ asset ('assets/images/213x213(3).gif')}}" tppabs="http://templatation.net/Site-templates/Cakery/temp/213x213(3).gif" alt="Placeholder" width="213" height="213"></li>
-            <li class="d"><img src="{{ asset ('assets/images/213x213(4).gif')}}" tppabs="http://templatation.net/Site-templates/Cakery/temp/213x213(4).gif" alt="Placeholder" width="213" height="213"></li>
+            <li class="a"><img src="{{ asset ('assets/images/213x213(1).gif')}}" alt="Placeholder" width="213" height="213"></li>
+            <li class="b"><img src="{{ asset ('assets/images/213x213(2).gif')}}" alt="Placeholder" width="213" height="213"></li>
+            <li class="c"><img src="{{ asset ('assets/images/213x213(3).gif')}}" alt="Placeholder" width="213" height="213"></li>
+            <li class="d"><img src="{{ asset ('assets/images/213x213(4).gif')}}" alt="Placeholder" width="213" height="213"></li>
         </ul>
     </div>
 
@@ -29,7 +29,7 @@
             <ul class="gallery-e">
             @foreach($products as $product)
                 @if($product->home == 1)
-                        <li><a href="{{ '/shop/'.$product->category_alias.'/'.$product->alias }}"><img src="{{ asset ('cache/'.$product->img)}}" alt="Placeholder"> <span><span class="title">{{  $product->title }}</span>  {{  $product->desc }}</a></li>
+                        <li><a href="{{ '/shop/'.$product->category_alias.$product->alias }}"><img src="{{ asset ('cache/'.$product->img)}}" alt="Placeholder"> <span><span class="title">{{  $product->title }}</span>  {{  $product->desc }}</a></li>
                 @endif
             @endforeach
             </ul>

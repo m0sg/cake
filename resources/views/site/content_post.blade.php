@@ -5,7 +5,11 @@
 <section id="content">
     <div class="cols-a">
         <article>
-            {!! Breadcrumbs::render() !!}
+            <ul class="breadcrumbs">
+                <li><a href="{{ route('home') }}">Главная/</a></li>
+                <li><a href="{{ route('blog') }}">Блог/</a></li>
+                <li>{{ $post['title'] }}</li>
+            </ul>
             <header>
                 <figure><img src="{{ asset ('assets/images/'.$post['img'])}}" talt="Placeholder" width="870" height="490"> <figcaption>{{ $post['created_at'] }}</figcaption></figure>
                 <h2>{{ $post['title'] }}</h2>

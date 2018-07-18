@@ -146,7 +146,7 @@ article, aside, details, div, figcaption, figure, footer, header, hgroup, menu, 
 
 
 /* 2. Columns --------- */
-.cols-a { width: 100%; }
+.cols-a { width: 100%; clear: both; }
 .cols-a:after { content: ""; display: block; overflow: hidden; clear: both; height: 0; }
 	.cols-a > *:first-child { float: left; width: 870px; }
 		.cols-a > *:first-child > footer { margin-top: 52px; padding: 41px 0 0; border-top: 1px solid rgba(83,53,55,.12); }
@@ -482,7 +482,7 @@ figure { margin: 32px 0; font-size: 1.1em; text-transform: uppercase; }
 ul, ol, dd, blockquote { list-style: none; padding-left: 36px; }
 	ul ul, ul ol, ol ol, ol ul { margin-bottom: 0; }
 ul { list-style: none; }
-	li { position: relative; }
+	/*li { position: relative; }*/
 		ul li:before { content: ""; display: block; position: absolute; left: -15px; top: 10px; width: 6px; height: 6px; border-radius: 10px; background: #84397e; }
 		.lt-ie9 ul li:before { background: url(../images/sprite-a.png)/*tpa=http://templatation.net/Site-templates/Cakery/images/sprite-a.png*/ 0 -91px no-repeat; }
 		ol li > .no { position: absolute; left: -15px; top: 0; color: #aa5fa4; }
@@ -820,4 +820,11 @@ h6 { font-size: 2.2em; }
 }
 @media only screen and (max-width: 400px) {
 	
+}
+
+#content .breadcrumbs ul{
+	list-style: none;
+}
+#content .breadcrumbs li{
+	float: left;
 }

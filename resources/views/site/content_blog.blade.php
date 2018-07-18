@@ -3,6 +3,13 @@
     <figure><img src="{{ asset ('assets/images/blog.jpg')}}" alt="Placeholder"></figure>
 </article>
 <section id="content">
+    <ul class="breadcrumbs">
+        <li><a href="{{ route('home') }}">Главная/</a></li>
+        <li><a href="{{ route('blog') }}">Блог</a></li>
+    </ul>
+
+
+
     <div class="news-b">
     @if(isset($articles) && is_object($articles))
             @foreach($articles as $articl)

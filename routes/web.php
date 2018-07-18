@@ -23,9 +23,7 @@ Route::get('/blog',['uses'=>'BlogController@execute', 'as'=>'blog']);
 
 Route::get('/blog/{alias}',['uses'=>'PostController@execute', 'as'=>'post']);
 
-//Route::get('/shop/{category_alias}/{alias}',['uses'=>'CakeController@execute', 'as'=>'cake']);
-
-//Route::get('/shop/pastries/{alias}',['uses'=>'PastriesController@execute', 'as'=>'pastries']);
+Route::get('/shop/{alias}',['uses'=>'ProductController@execute', 'as'=>'product']);
 
 Route::get('/showroom',['uses'=>'ShowroomController@execute','as'=>'showroom']);
 
@@ -42,19 +40,3 @@ Route::get('/clear', function() {
     Artisan::call('route:clear');
     return "Кэш очищен.";
 });
-
-//Route::match(['get', 'post'], '/',['uses'=>'IndexController@execute','as'=>'home']);
-
-//Route::resource('shop', 'ShopController');
-//
-//Route::resource('blog', 'BlogsController');
-
-//Auth::routes();
-//
-//Route::get('/home', 'HomeController@index')->name('home');
-//
-//Auth::routes();
-//
-//Route::get('/home', 'HomeController@index')->name('home');
-
-

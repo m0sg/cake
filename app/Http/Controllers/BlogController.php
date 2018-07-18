@@ -31,7 +31,6 @@ class BlogController extends Controller
             }, 10, true);
         }
 
-
         return view('site.blog', array(
             'menu' => $menu,
             'articles' => $articles,

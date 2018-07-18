@@ -4,25 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Pages;
-use App\Articles;
-use App\Tags;
-use Falur;
+use App\Categories;
+use App\Products;
+use Falur;;
 
-class PostController extends Controller
+class ProductController extends Controller
 {
-    //
-
-
-
     public function execute($alias)
     {
 
-
         $pages = Pages::all();
-        $articles = Articles::all();
-        $tags = Tags::all();
-
-
+        $categories = Categories::all();
+        $products = Products::all();
 
         $menu = array();
         foreach ($pages as $page){
@@ -30,18 +23,19 @@ class PostController extends Controller
             array_push($menu, $item);
         }
 
-        $post = Articles::where('alias', strip_tags($alias))->first();
+        $product = Products::where('alias', strip_tags($alias))->first();
 
-        if (!$post['alias']) {
+
+
+        if (!$product['alias']) {
             abort(404);
         }
 
-
-        return view('site.post', array(
+        return view('site.product', array(
             'menu' => $menu,
-            'articles' => $articles,
-            'post' => $post,
-            'tags' => $tags,
+            'categories' => $categories,
+            'product' => $product,
+            'products' => $products,
         ));
 
     }
