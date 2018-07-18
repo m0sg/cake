@@ -26,7 +26,7 @@ Duis dui magna, vulputate eget mi ac, pharetra vehicula massa. Phasellus vitae n
                 'desc' => 'Sed porta, nulla nec tincidunt viverra, est dui lobortis erat, ut euismod dui massa eget ipsum. Integer a lobortis mauris. In quis lectus sem. Nullam sagittis pellentesque ligula, eget elementum nibh consectetur in. Maecenas convallis accumsan hendrerit. Donec a augue velit.',
                 'alias' => 'Wedding1',
                 'img' => 'Wedding1.jpg',
-                'category_alias' => 'Wedding',
+                'category_id' => '3',
                 'price' => '10',
                 'home' => '1',
 
@@ -43,7 +43,7 @@ Duis dui magna, vulputate eget mi ac, pharetra vehicula massa. Phasellus vitae n
                 'desc' => 'Sed porta, nulla nec tincidunt viverra, est dui lobortis erat, ut euismod dui massa eget ipsum. Integer a lobortis mauris. In quis lectus sem. Nullam sagittis pellentesque ligula, eget elementum nibh consectetur in. Maecenas convallis accumsan hendrerit. Donec a augue velit.',
                 'alias' => 'Wedding2',
                 'img' => 'Wedding2.jpg',
-                'category_alias' => 'Wedding',
+                'category_id' => '3',
                 'price' => '20',
 
             ]);
@@ -59,7 +59,7 @@ Duis dui magna, vulputate eget mi ac, pharetra vehicula massa. Phasellus vitae n
                 'desc' => 'Sed porta, nulla nec tincidunt viverra, est dui lobortis erat, ut euismod dui massa eget ipsum. Integer a lobortis mauris. In quis lectus sem. Nullam sagittis pellentesque ligula, eget elementum nibh consectetur in. Maecenas convallis accumsan hendrerit. Donec a augue velit.',
                 'alias' => 'Wedding3',
                 'img' => 'Wedding3.jpg',
-                'category_alias' => 'Wedding',
+                'category_id' => '3',
                 'price' => '30',
                 'home' => '1',
             ]);
@@ -75,7 +75,7 @@ Duis dui magna, vulputate eget mi ac, pharetra vehicula massa. Phasellus vitae n
                 'desc' => 'Sed porta, nulla nec tincidunt viverra, est dui lobortis erat, ut euismod dui massa eget ipsum. Integer a lobortis mauris. In quis lectus sem. Nullam sagittis pellentesque ligula, eget elementum nibh consectetur in. Maecenas convallis accumsan hendrerit. Donec a augue velit.',
                 'alias' => 'Childrens1',
                 'img' => 'Childrens1.jpg',
-                'category_alias' => 'Childrens',
+                'category_id' => '4',
                 'price' => '40',
             ]);
             products::create([
@@ -90,7 +90,7 @@ Duis dui magna, vulputate eget mi ac, pharetra vehicula massa. Phasellus vitae n
                 'desc' => 'Sed porta, nulla nec tincidunt viverra, est dui lobortis erat, ut euismod dui massa eget ipsum. Integer a lobortis mauris. In quis lectus sem. Nullam sagittis pellentesque ligula, eget elementum nibh consectetur in. Maecenas convallis accumsan hendrerit. Donec a augue velit.',
                 'alias' => 'Childrens2',
                 'img' => 'Childrens2.jpg',
-                'category_alias' => 'Childrens',
+                'category_id' => '4',
                 'price' => '50',
                 'home' => '1',
             ]);
@@ -106,7 +106,7 @@ Duis dui magna, vulputate eget mi ac, pharetra vehicula massa. Phasellus vitae n
                 'desc' => 'Sed porta, nulla nec tincidunt viverra, est dui lobortis erat, ut euismod dui massa eget ipsum. Integer a lobortis mauris. In quis lectus sem. Nullam sagittis pellentesque ligula, eget elementum nibh consectetur in. Maecenas convallis accumsan hendrerit. Donec a augue velit.',
                 'alias' => 'Childrens3',
                 'img' => 'Childrens3.jpg',
-                'category_alias' => 'Childrens',
+                'category_id' => '4',
                 'price' => '60',
                 'home' => '1',
             ]);
@@ -122,7 +122,7 @@ Duis dui magna, vulputate eget mi ac, pharetra vehicula massa. Phasellus vitae n
                 'desc' => 'Sed porta, nulla nec tincidunt viverra, est dui lobortis erat, ut euismod dui massa eget ipsum. Integer a lobortis mauris. In quis lectus sem. Nullam sagittis pellentesque ligula, eget elementum nibh consectetur in. Maecenas convallis accumsan hendrerit. Donec a augue velit.',
                 'alias' => 'Corporate1',
                 'img' => 'Corporate1.jpg',
-                'category_alias' => 'Corporate',
+                'category_id' => '5',
                 'price' => '70',
                 'home' => '1',
             ]);
@@ -138,7 +138,7 @@ Duis dui magna, vulputate eget mi ac, pharetra vehicula massa. Phasellus vitae n
                 'desc' => 'Sed porta, nulla nec tincidunt viverra, est dui lobortis erat, ut euismod dui massa eget ipsum. Integer a lobortis mauris. In quis lectus sem. Nullam sagittis pellentesque ligula, eget elementum nibh consectetur in. Maecenas convallis accumsan hendrerit. Donec a augue velit.',
                 'alias' => 'Corporate2',
                 'img' => 'Corporate2.jpg',
-                'category_alias' => 'Corporate',
+                'category_id' => '5',
                 'price' => '80',
             ]);
             products::create([
@@ -153,7 +153,7 @@ Duis dui magna, vulputate eget mi ac, pharetra vehicula massa. Phasellus vitae n
                 'desc' => 'Sed porta, nulla nec tincidunt viverra, est dui lobortis erat, ut euismod dui massa eget ipsum. Integer a lobortis mauris. In quis lectus sem. Nullam sagittis pellentesque ligula, eget elementum nibh consectetur in. Maecenas convallis accumsan hendrerit. Donec a augue velit.',
                 'alias' => 'Corporate3',
                 'img' => 'Corporate3.jpg',
-                'category_alias' => 'Corporate',
+                'category_id' => '5',
                 'price' => '90',
                 'home' => '1',
             ]);
@@ -169,7 +169,7 @@ Duis dui magna, vulputate eget mi ac, pharetra vehicula massa. Phasellus vitae n
                 'desc' => 'Sed porta, nulla nec tincidunt viverra, est dui lobortis erat, ut euismod dui massa eget ipsum. Integer a lobortis mauris. In quis lectus sem. Nullam sagittis pellentesque ligula, eget elementum nibh consectetur in. Maecenas convallis accumsan hendrerit. Donec a augue velit.',
                 'alias' => 'Eclairs',
                 'img' => 'Eclairs1.jpg',
-                'category_alias' => 'Eclairs',
+                'category_id' => '6',
                 'price' => '100',
             ]);
             products::create([
@@ -184,7 +184,7 @@ Duis dui magna, vulputate eget mi ac, pharetra vehicula massa. Phasellus vitae n
                 'desc' => 'Sed porta, nulla nec tincidunt viverra, est dui lobortis erat, ut euismod dui massa eget ipsum. Integer a lobortis mauris. In quis lectus sem. Nullam sagittis pellentesque ligula, eget elementum nibh consectetur in. Maecenas convallis accumsan hendrerit. Donec a augue velit.',
                 'alias' => 'Zefir',
                 'img' => 'Zefir1.jpg',
-                'category_alias' => 'Zefir',
+                'category_id' => '7',
                 'price' => '110',
             ]);
             products::create([
@@ -199,7 +199,7 @@ Duis dui magna, vulputate eget mi ac, pharetra vehicula massa. Phasellus vitae n
                 'desc' => 'Sed porta, nulla nec tincidunt viverra, est dui lobortis erat, ut euismod dui massa eget ipsum. Integer a lobortis mauris. In quis lectus sem. Nullam sagittis pellentesque ligula, eget elementum nibh consectetur in. Maecenas convallis accumsan hendrerit. Donec a augue velit.',
                 'alias' => 'Macaroni',
                 'img' => 'Macaroni1.jpg',
-                'category_alias' => 'Macaroni',
+                'category_id' => '8',
                 'price' => '120',
             ]);
         }

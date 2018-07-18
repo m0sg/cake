@@ -23,7 +23,6 @@ Route::get('/blog',['uses'=>'BlogController@execute', 'as'=>'blog']);
 
 Route::get('/blog/{alias}',['uses'=>'PostController@execute', 'as'=>'post']);
 
-
 //Route::get('/shop/{category_alias}/{alias}',['uses'=>'CakeController@execute', 'as'=>'cake']);
 
 //Route::get('/shop/pastries/{alias}',['uses'=>'PastriesController@execute', 'as'=>'pastries']);

@@ -51,7 +51,22 @@ class Products extends Section
             AdminColumn::text('desc', 'Краткое описание'),
             AdminColumn::text('text', 'Текст'),
             AdminColumn::text('price', 'Цена'),
-            AdminColumn::text('category_alias', 'Категория'),
+
+
+
+//            AdminColumn::custom('Категория', function(\Illuminate\Database\Eloquent\Model $model) {
+//
+//                $category = $product->getAttribute('category'); // Вернет объект App\Department
+//                $value = $category->getAttribute('title');
+//
+//                return $value;
+//            }),
+//
+//            Column::custom()->label('Published')->callback(function ($instance)
+//            {
+//                return $instance->published ? '&check;' : '-';
+//            }),
+//            AdminColumn::text('category_id', 'Категория'),
             AdminColumn::text('alias', 'Ссылка'),
             AdminColumn::image('img', 'Картинка'),
             AdminColumn::text('home', 'Вывести на главную?'),
@@ -71,7 +86,7 @@ class Products extends Section
             AdminFormElement::text('desc', 'Краткое описание')->required(),
             AdminFormElement::text('text', 'Текст')->required(),
             AdminFormElement::text('price', 'Цена')->required(),
-            AdminFormElement::select('category_alias', 'Категория', \App\Categories::class, 'title')->required(),
+            AdminFormElement::select('category_id', 'Категория', \App\Categories::class, 'title')->required(),
             AdminFormElement::text('alias', 'Ссылка')->required(),
             AdminFormElement::image('img', 'Фото')->required(),
             AdminFormElement::select('home', 'Вывести на главную?',[0=>'Нет',1=>'Да']),
@@ -93,7 +108,7 @@ class Products extends Section
             AdminFormElement::text('text', 'Текст')->required(),
             AdminFormElement::text('price', 'Цена')->required(),
             AdminFormElement::text('alias', 'Ссылка')->required(),
-            AdminFormElement::select('category_alias', 'Категория', \App\Categories::class, 'title')->required(),
+            AdminFormElement::select('category_id', 'Категория', \App\Categories::class, 'title')->required(),
             AdminFormElement::image('img', 'Фото')->required(),
             AdminFormElement::select('home', 'Вывести на главную?',[0=>'Нет',1=>'Да']),
         ]);

@@ -15,8 +15,8 @@ class ChangeProductsTable extends Migration
     {
         Schema::table('products', function (Blueprint $table) {
             //
-            $table->string('category_alias');
-            $table->foreign('category_alias')->references('alias')->on('categories');
+            $table->integer('category_id')->unsigned();
+            $table->foreign('category_id')->references('id')->on('categories');
         });
     }
 
