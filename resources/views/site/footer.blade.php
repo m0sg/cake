@@ -2,7 +2,7 @@
     <nav>
         <div>
             <h3>Поиск</h3>
-            {!! Form::open(['url' => 'search']) !!}
+            {!! Form::open(['action' => 'SearchController@execute']) !!}
             {{ Form::text('search', '', ['placeholder' => 'Запрос']) }}
             {{ Form::submit('Поиск') }}
             {!! Form::close() !!}

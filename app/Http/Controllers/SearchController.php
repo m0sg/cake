@@ -11,12 +11,14 @@ use Laravel\Scout\Searchable;
 class SearchController extends Controller
 {
     //
+    /**
+     * @param Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function execute(Request $request)
     {
-        $name = $request->name;
-        $articles = Articles::search($name)->paginate(15);
-
-        dd($articles);
+        $name = $request->search;
+        $articles = Articles::search($name)->paginate(6);
 
         $menu = array();
         foreach ($pages as $page){

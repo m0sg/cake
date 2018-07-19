@@ -9,6 +9,9 @@ use Illuminate\Support\Facades\Mail;
 class MailSetting extends Controller
 {
     //
+    /**
+     * @param Request $request
+     */
     public function send_form(Request $request){
 
 
