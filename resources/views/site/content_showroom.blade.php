@@ -7,4 +7,6 @@
     </article>
 </section>
 
-Информация о шоуруме
+<section id="content">
+    {!! $page['text'] !!}
+</section>

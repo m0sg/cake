@@ -17,12 +17,12 @@ class Products extends Model
         'alias',
         'img',
         'price',
-        'category_alias',
+        'category_id',
         'home'
     ];
 
     public function category (){
-        return $this->belongsTo('App\Models\Categories','category_alias', 'alias');
+        return $this->belongsTo('App\Models\Categories','category_id', 'id');
     }
 
 }

@@ -18,8 +18,10 @@ class ContactsController extends Controller
             $item = array('title' => $page->name, 'alias' => $page->alias, 'parent' => $page->parent);
             array_push($menu, $item);
         }
+        $page = Pages::where('alias', 'contacts')->first();
         return view('site.contacts', array(
             'menu' => $menu,
+            'page' => $page,
         ));
 
     }

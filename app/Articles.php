@@ -8,7 +8,6 @@ use Laravel\Scout\Searchable;
 class Articles extends Model
 {
     //
-//    use Searchable;
 
     protected $fillable = [
         'title',

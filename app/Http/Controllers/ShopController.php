@@ -27,7 +27,7 @@ class ShopController extends Controller
 
         foreach($products as $produc) {
             $img = Image::cache(function ($image) use ($produc) {
-                $image->make("assets/images/" . $produc->img)->resize(null, 273, function ($constraint) {
+                $image->make($produc->img)->resize(null, 273, function ($constraint) {
                     $constraint->aspectRatio();
                 })->save('cache/' . $produc->img);
             }, 10, true);

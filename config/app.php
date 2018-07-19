@@ -166,10 +166,7 @@ return [
 
         SleepingOwl\Admin\Providers\SleepingOwlServiceProvider::class,
 	    Intervention\Image\ImageServiceProvider::class,
-        Laravel\Scout\ScoutServiceProvider::class,
-        AlgoliaSearch\Laravel\AlgoliaServiceProvider::class,
-        Falur\Breadcrumbs\Providers\ServiceProvider::class,
-
+        Yab\MySQLScout\Providers\MySQLScoutServiceProvider::class,
         /*
          * Package Service Providers...
          */
@@ -179,7 +176,6 @@ return [
          */
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
@@ -232,8 +228,6 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 	    'Image' => Intervention\Image\Facades\Image::class,
-        'Breadcrumbs' => Falur\Breadcrumbs\Facades\Breadcrumbs::class,
-        'BreadcrumbsFactory' => Falur\Breadcrumbs\Facades\BreadcrumbsFactory::class,
 
     ],
 

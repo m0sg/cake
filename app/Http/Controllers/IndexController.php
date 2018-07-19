@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
-
+use App\Mail\MailClass;
 use Illuminate\Http\Request;
 
 
 use App\Pages;
 use App\Products;
+use Illuminate\Support\Facades\Mail;
 use Image;
 
 
@@ -16,6 +17,7 @@ class IndexController extends Controller
     //
     public function execute()
     {
+
 
         $pages = Pages::all();
         $products = Products::all();
@@ -31,7 +33,7 @@ class IndexController extends Controller
 
                 foreach($products as $product) {
             $img = Image::cache(function ($image) use ($product) {
-                $image->make("assets/images/" . $product->img)->resize(null, 204, function ($constraint) {
+                $image->make($product->img)->resize(null, 204, function ($constraint) {
                     $constraint->aspectRatio();
                 })->save('cache/' . $product->img);
             }, 10, true);
@@ -46,5 +48,9 @@ class IndexController extends Controller
         ));
 
     }
+
+
+
+
 
 }

@@ -13,9 +13,11 @@
 
 //Route::resource('/', 'IndexController');
 
-Route::get('/',['uses'=>'IndexController@execute','as'=>'home']);
-Route::get('/home',['uses'=>'IndexController@execute','as'=>'home']);
+Route::get('/', ['uses'=>'IndexController@execute','as'=>'home']);
 
+Route::post('/', ['uses'=>'IndexController@send_form','as'=>'mail']);
+
+Route::get('/home',['uses'=>'IndexController@execute','as'=>'home']);
 
 Route::get('/shop',['uses'=>'ShopController@execute', 'as'=>'shop']);
 
@@ -31,6 +33,9 @@ Route::get('/about',['uses'=>'AboutController@execute','as'=>'about']);
 
 Route::get('/contacts',['uses'=>'ContactsController@execute','as'=>'contacts']);
 
+Route::get('search','SearchController@execute');
+
+
 Route::auth();
 
 Route::get('/clear', function() {
@@ -40,3 +45,7 @@ Route::get('/clear', function() {
     Artisan::call('route:clear');
     return "Кэш очищен.";
 });
+
+Route::post('send-mail', 'MailSetting@send_form');
+
+

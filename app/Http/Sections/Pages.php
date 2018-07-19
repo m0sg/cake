@@ -46,7 +46,6 @@ class Pages extends Section
             AdminColumn::text('name', 'Имя страницы'),
             AdminColumn::text('text', 'Текст'),
             AdminColumn::text('alias', 'Ссылка'),
-            AdminColumn::image('img', 'Изображение'),
             AdminColumn::text('parent', 'Родитель'),
 
 
@@ -63,9 +62,8 @@ class Pages extends Section
     {
         return AdminForm::panel()->addBody([
             AdminFormElement::text('name', 'Имя страницы')->required(),
-            AdminFormElement::text('text', 'Текст')->required(),
+            AdminFormElement::ckeditor('text', 'Текст')->required(),
             AdminFormElement::text('alias', 'Ссылка')->required(),
-            AdminFormElement::image('img', 'Изображение')->required(),
             AdminFormElement::text('parent', 'Родитель')->required(),
         ]);
 
@@ -78,9 +76,8 @@ class Pages extends Section
     {
         return AdminForm::panel()->addBody([
             AdminFormElement::text('name', 'Имя страницы')->required(),
-            AdminFormElement::text('text', 'Текст')->required(),
+            AdminFormElement::ckeditor('text', 'Текст')->required(),
             AdminFormElement::text('alias', 'Ссылка')->required(),
-            AdminFormElement::image('img', 'Изображение')->required(),
             AdminFormElement::text('parent', 'Родитель')->required(),
         ]);
     }

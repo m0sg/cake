@@ -54,19 +54,13 @@ class Products extends Section
 
 
 
-//            AdminColumn::custom('Категория', function(\Illuminate\Database\Eloquent\Model $model) {
-//
-//                $category = $product->getAttribute('category'); // Вернет объект App\Department
-//                $value = $category->getAttribute('title');
-//
-//                return $value;
-//            }),
-//
-//            Column::custom()->label('Published')->callback(function ($instance)
-//            {
-//                return $instance->published ? '&check;' : '-';
-//            }),
-//            AdminColumn::text('category_id', 'Категория'),
+            AdminColumn::custom('Категория', function(\Illuminate\Database\Eloquent\Model $model) {
+
+
+
+
+                return $model->category_id;
+            }),
             AdminColumn::text('alias', 'Ссылка'),
             AdminColumn::image('img', 'Картинка'),
             AdminColumn::text('home', 'Вывести на главную?'),
@@ -83,8 +77,8 @@ class Products extends Section
     {
         return AdminForm::panel()->addBody([
             AdminFormElement::text('title', 'Название продукта')->required(),
-            AdminFormElement::text('desc', 'Краткое описание')->required(),
-            AdminFormElement::text('text', 'Текст')->required(),
+            AdminFormElement::ckeditor('desc', 'Краткое описание')->required(),
+            AdminFormElement::ckeditor('text', 'Текст')->required(),
             AdminFormElement::text('price', 'Цена')->required(),
             AdminFormElement::select('category_id', 'Категория', \App\Categories::class, 'title')->required(),
             AdminFormElement::text('alias', 'Ссылка')->required(),
@@ -104,8 +98,8 @@ class Products extends Section
     {
         return AdminForm::panel()->addBody([
             AdminFormElement::text('title', 'Название продукта')->required(),
-            AdminFormElement::text('desc', 'Краткое описание')->required(),
-            AdminFormElement::text('text', 'Текст')->required(),
+            AdminFormElement::ckeditor('desc', 'Краткое описание')->required(),
+            AdminFormElement::ckeditor('text', 'Текст')->required(),
             AdminFormElement::text('price', 'Цена')->required(),
             AdminFormElement::text('alias', 'Ссылка')->required(),
             AdminFormElement::select('category_id', 'Категория', \App\Categories::class, 'title')->required(),

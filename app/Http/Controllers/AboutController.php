@@ -18,8 +18,14 @@ class AboutController extends Controller
             $item = array('title' => $page->name, 'alias' => $page->alias, 'parent' => $page->parent);
             array_push($menu, $item);
         }
+
+
+        $page = Pages::where('alias', 'about')->first();
+
+//        dd($page);
         return view('site.about', array(
             'menu' => $menu,
+            'page' => $page,
         ));
 
     }

@@ -18,8 +18,10 @@ class ShowroomController extends Controller
             $item = array('title' => $page->name, 'alias' => $page->alias, 'parent' => $page->parent);
             array_push($menu, $item);
         }
+        $page = Pages::where('alias', 'showroom')->first();
         return view('site.showroom', array(
             'menu' => $menu,
+            'page' => $page,
         ));
 
     }

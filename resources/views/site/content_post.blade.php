@@ -3,15 +3,18 @@
     <figure><img src="{{ asset ('assets/images/blog.jpg')}}" alt="Placeholder"></figure>
 </article>
 <section id="content">
+    <ul id="breadcrumbs">
+        <li><a href="{{ route('home') }}">Главная/</a></li>
+        <li><a href="{{ route('blog') }}">Блог/</a></li>
+        <li>{{ $post['title'] }}</li>
+    </ul>
+</section>
+<section id="content">
     <div class="cols-a">
         <article>
-            <ul class="breadcrumbs">
-                <li><a href="{{ route('home') }}">Главная/</a></li>
-                <li><a href="{{ route('blog') }}">Блог/</a></li>
-                <li>{{ $post['title'] }}</li>
-            </ul>
+
             <header>
-                <figure><img src="{{ asset ('assets/images/'.$post['img'])}}" talt="Placeholder" width="870" height="490"> <figcaption>{{ $post['created_at'] }}</figcaption></figure>
+                <figure><img src="{{ asset ($post['img'])}}" talt="Placeholder" width="870" height="490"> <figcaption>{{ $post['created_at'] }}</figcaption></figure>
                 <h2>{{ $post['title'] }}</h2>
             </header>
             <p class="scheme-a">{{ $post['desc'] }}</p>

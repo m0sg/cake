@@ -66,6 +66,7 @@ class Categories extends Section
         return AdminForm::panel()->addBody([
             AdminFormElement::text('title', 'Название категории')->required(),
             AdminFormElement::text('alias', 'Ссылка')->required(),
+            AdminFormElement::select('parent_id', 'Категория', \App\Categories::class, 'title')->required(),
         ]);
 
 
@@ -80,6 +81,7 @@ class Categories extends Section
         return AdminForm::panel()->addBody([
             AdminFormElement::text('title', 'Название категории')->required(),
             AdminFormElement::text('alias', 'Ссылка')->required(),
+            AdminFormElement::select('parent_id', 'Категория', \App\Categories::class, 'title')->required(),
         ]);
     }
 

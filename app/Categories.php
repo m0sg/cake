@@ -12,5 +12,6 @@ class Categories extends Model
         'title',
         'parent_id',
         'alias',
+        'id'
     ];
 }

@@ -70,8 +70,8 @@ class Articles extends Section
     {
         return AdminForm::panel()->addBody([
             AdminFormElement::text('title', 'Название поста')->required(),
-            AdminFormElement::text('desc', 'Краткое описание')->required(),
-            AdminFormElement::text('text', 'Текст')->required(),
+            AdminFormElement::ckeditor('desc', 'Краткое описание')->required(),
+            AdminFormElement::ckeditor('text', 'Текст')->required(),
             AdminFormElement::text('alias', 'Ссылка')->required(),
             AdminFormElement::image('img', 'Картинка')->required(),
         ]);
@@ -85,8 +85,8 @@ class Articles extends Section
     {
         return AdminForm::panel()->addBody([
             AdminFormElement::text('title', 'Название поста')->required(),
-            AdminFormElement::text('desc', 'Краткое описание')->required(),
-            AdminFormElement::text('text', 'Текст')->required(),
+            AdminFormElement::ckeditor('desc', 'Краткое описание')->required(),
+            AdminFormElement::ckeditor('text', 'Текст')->required(),
             AdminFormElement::text('alias', 'Ссылка')->required(),
             AdminFormElement::image('img', 'Картинка')->required(),
         ]);

@@ -11,7 +11,7 @@
         <div>
             <h2 class="header-a a"><span class="scheme-b">Made For You</span><br> With Love</h2>
             <p class="scheme-c">Suspendisse leo odio, scelerisque id ullamcorper vitae, iaculis bibendum magna. Etiam convallis porttitor diam at rutrum. Suspendisse potenti. In commodo sapien ac congue luctus. Vivamus leo lacus, mattis a ante id, ultrices semper odio. Maecenas gravida ac mauris a vestibulum. Ut ac tristique nisl, vel porta nisi.</p>
-            <p class="link-a"><a href="index.htm" tppabs="http://templatation.net/Site-templates/Cakery/">et accumsan mi tincidunt vel</a></p>
+            <p class="link-a"><a href="index.htm">et accumsan mi tincidunt vel</a></p>
         </div>
         <ul class="gallery-d">
             <li class="a"><img src="{{ asset ('assets/images/213x213(1).gif')}}" alt="Placeholder" width="213" height="213"></li>

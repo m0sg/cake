@@ -1,22 +1,10 @@
 <article id="featured">
-    <h2>Delicious News</h2>
+    <h2>Search</h2>
     <figure><img src="{{ asset ('assets/images/blog.jpg')}}" alt="Placeholder"></figure>
 </article>
 
 
-
-
 <section id="content">
-    <ul id="breadcrumbs">
-        <li><a href="{{ route('home') }}">Главная/</a></li>
-        <li><a href="{{ route('blog') }}">Блог</a></li>
-    </ul>
-</section>
-<section id="content">
-
-
-
-
     <div class="news-b">
     @if(isset($articles) && is_object($articles))
             @foreach($articles as $articl)

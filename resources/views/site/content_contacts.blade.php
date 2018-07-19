@@ -6,4 +6,6 @@
     </article>
 </section>
 
-Информация о контактах
+<section id="content">
+    {!! $page['text'] !!}
+</section>

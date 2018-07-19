@@ -6,11 +6,16 @@
         <figure><img src="{{ asset ('assets/images/shop.jpg')}}" alt="Placeholder"></figure>
     </article>
 </section>
-<article id="content">
-    <ul class="breadcrumbs">
+
+<section id="content">
+    <ul id="breadcrumbs">
         <li><a href="{{ route('home') }}">Главная/</a></li>
-        <li><a href="{{ route('shop') }}">Магазин</a></li>
+        <li><a href="{{ route('shop') }}">Магазин/</a></li>
+        <li>Все продукты</li>
     </ul>
+</section>
+<article id="content">
+
 @if(isset($products) && is_object($products))
         <h2 class="header-a a"><span class="scheme-b">All</span> Products</h2>
                     <div class="filter-b">

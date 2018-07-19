@@ -25,7 +25,7 @@ class BlogController extends Controller
 
         foreach($articles as $articl) {
             $img = Image::cache(function ($image) use ($articl) {
-                $image->make("assets/images/" . $articl->img)->resize(null, 273, function ($constraint) {
+                $image->make($articl->img)->resize(null, 273, function ($constraint) {
                     $constraint->aspectRatio();
                 })->save('cache/' . $articl->img);
             }, 10, true);
