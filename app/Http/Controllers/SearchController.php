@@ -19,13 +19,16 @@ class SearchController extends Controller
     {
         $name = $request->search;
         $articles = Articles::search($name)->paginate(6);
-
+if(count($articles) === 0){
+    return redirect('home');
+}
+else {
         $menu = array();
 
         return view('site.search', array(
             'menu' => $menu,
             'articles' => $articles,
         ));
-
+}
     }
 }
