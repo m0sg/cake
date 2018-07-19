@@ -55,10 +55,6 @@ class Products extends Section
 
 
             AdminColumn::custom('Категория', function(\Illuminate\Database\Eloquent\Model $model) {
-
-
-
-
                 return $model->category_id;
             }),
             AdminColumn::text('alias', 'Ссылка'),

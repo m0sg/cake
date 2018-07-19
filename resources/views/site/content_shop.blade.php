@@ -10,8 +10,7 @@
 <section id="content">
     <ul id="breadcrumbs">
         <li><a href="{{ route('home') }}">Главная/</a></li>
-        <li><a href="{{ route('shop') }}">Магазин/</a></li>
-        <li>Все продукты</li>
+        <li>Магазин</li>
     </ul>
 </section>
 <article id="content">

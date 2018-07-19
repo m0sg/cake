@@ -9,7 +9,7 @@
 <section id="content">
     <ul id="breadcrumbs">
         <li><a href="{{ route('home') }}">Главная/</a></li>
-        <li><a href="{{ route('blog') }}">Блог</a></li>
+        <li>Блог</li>
     </ul>
 </section>
 <section id="content">

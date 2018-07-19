@@ -57,6 +57,10 @@ class Articles extends Section
             AdminColumn::text('text', 'Текст'),
             AdminColumn::text('alias', 'Ссылка'),
             AdminColumn::image('img', 'Картинка'),
+            AdminColumn::custom('Тег', function(\Illuminate\Database\Eloquent\Model $model) {
+                return $model->tags_id;
+            }),
+
         ])->paginate(5);
         // remove if unused
     }
@@ -74,6 +78,8 @@ class Articles extends Section
             AdminFormElement::ckeditor('text', 'Текст')->required(),
             AdminFormElement::text('alias', 'Ссылка')->required(),
             AdminFormElement::image('img', 'Картинка')->required(),
+//            AdminFormElement::select('Tag', 'Теги', \App\Tags::class, 'title')->required(),
+
         ]);
 
     }
@@ -89,6 +95,7 @@ class Articles extends Section
             AdminFormElement::ckeditor('text', 'Текст')->required(),
             AdminFormElement::text('alias', 'Ссылка')->required(),
             AdminFormElement::image('img', 'Картинка')->required(),
+//            AdminFormElement::select('category_id', 'Категория', \App\Tags::class, 'title')->required(),
         ]);
     }
 
