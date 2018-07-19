@@ -21,10 +21,6 @@ class SearchController extends Controller
         $articles = Articles::search($name)->paginate(6);
 
         $menu = array();
-        foreach ($pages as $page){
-            $item = array('title' => $page->name, 'alias' => $page->alias, 'parent' => $page->parent);
-            array_push($menu, $item);
-        }
 
         return view('site.search', array(
             'menu' => $menu,

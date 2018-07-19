@@ -9,6 +9,7 @@ class Articles extends Model
 {
     //
 
+    use Searchable;
     protected $fillable = [
         'title',
         'text',

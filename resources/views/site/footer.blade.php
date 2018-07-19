@@ -2,7 +2,7 @@
     <nav>
         <div>
             <h3>Поиск</h3>
-            {!! Form::open(['action' => 'SearchController@execute']) !!}
+            {!! Form::open(['url' => 'search']) !!}
             {{ Form::text('search', '', ['placeholder' => 'Запрос']) }}
             {{ Form::submit('Поиск') }}
             {!! Form::close() !!}
@@ -28,7 +28,7 @@
         </div>
 
                 <h3>Закажи обратный звонок</h3>
-        {!! Form::open(['url' => 'send-mail']) !!}
+        {!! Form::open(['url' => 'send_mail']) !!}
         {{ Form::text('name', '', ['placeholder' => 'Ваше имя']) }}
         {{ Form::text('phone', '', ['placeholder' => 'Ваш номер телефона']) }}
         {{ Form::submit('Отправить') }}

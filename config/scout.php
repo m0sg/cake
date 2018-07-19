@@ -41,7 +41,7 @@ return [
     |
     */
 
-    'queue' => env('SCOUT_QUEUE', false),
+    'queue' => false,
 
     /*
     |--------------------------------------------------------------------------
@@ -89,7 +89,7 @@ return [
     ],
 
     'mysql' => [
-        'mode' => 'FULLTEXT',
+        'mode' => 'NATURAL_LANGUAGE',
         'model_directories' => [app_path()],
         'min_search_length' => 0,
         'min_fulltext_search_length' => 4,

@@ -49,6 +49,16 @@ class IndexController extends Controller
 
     }
 
+    public function send_form(Request $request){
+
+
+        $name = $request->name;
+        $phone = $request->phone;
+
+        Mail::to('m0sgsergey@gmail.com')->send(new MailClass($name, $phone));
+        return redirect()->route('home');
+    }
+
 
 
 

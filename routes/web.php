@@ -33,7 +33,7 @@ Route::get('/about',['uses'=>'AboutController@execute','as'=>'about']);
 
 Route::get('/contacts',['uses'=>'ContactsController@execute','as'=>'contacts']);
 
-Route::get('search','SearchController@execute');
+Route::post('search','SearchController@execute');
 
 
 Route::auth();
@@ -46,6 +46,7 @@ Route::get('/clear', function() {
     return "Кэш очищен.";
 });
 
-Route::post('send-mail', 'MailSetting@send_form');
+Route::post('send_mail', 'IndexController@send_form');
+
 
 
